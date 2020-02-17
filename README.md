@@ -1,2 +1,3 @@
-# my_coding_labs
-my coding labs
+# My Coding Labs
+
+코딩했던 것들 잡정리
