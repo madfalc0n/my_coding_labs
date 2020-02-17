@@ -3,7 +3,7 @@ def solution(s):
     str_l = []
     str_l_len = []
     if len(s) < 2:
-        return s
+        return len(s)
     for i in range(1,max_v+1):
         #print(f"파트 {i}")
         temp = 0
@@ -11,7 +11,7 @@ def solution(s):
         j = i
         sent = ''
         while True:
-            #print(f"{temp} , {temp + i} , {j}  ,{j + i} ")
+            print(f"{temp} , {temp + i} , {j}  ,{j + i} ")
             if s[temp:temp+i] == s[j:j+i]:
                 cnt += 1
                 j += i
@@ -27,7 +27,7 @@ def solution(s):
                 cnt = 1
                 ##print(sent)
 
-            if j+i > len(s):
+            if j >= len(s):
                 #print("끝남")
                 #print(f"{temp} , {i} ,{temp + i}  , {j}  ,{j + i} ")
                 if cnt != 1:
@@ -42,10 +42,12 @@ def solution(s):
     return min(str_l_len)
 
 #s = "aabbaccc"
-#s = "abcabcdede"
+#s = "abcabcdede"   
 #s =  "abcabcabcabcdededededede"
-s = "xababcdcdababcdcd"
+#s = "xababcdcdababcdcd"
 #s = "abcabcabcabcdededededede"
+#s = 'aa' 
+s = 'ababcdcdababcdcd'
 print(solution(s))
 
 
