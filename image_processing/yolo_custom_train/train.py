@@ -1,9 +1,8 @@
 """
 Retrain the YOLO model for your own dataset.
 """
-#amd gpu 사용하기 위한 모듈
-import plaidml.keras
-plaidml.keras.install_backend()
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 import numpy as np
 import keras.backend as K
@@ -17,9 +16,9 @@ from yolo3.utils import get_random_data
 
 
 def _main():
-    annotation_path = '4_CLASS_test.txt'
+    annotation_path = '1_CLASS_test.txt'
     log_dir = 'logs/result/'
-    classes_path = '4_CLASS_test_classes.txt'
+    classes_path = '1_classes.txt'
     anchors_path = 'model_data/yolo_anchors.txt'
     class_names = get_classes(classes_path)
     num_classes = len(class_names)
@@ -27,15 +26,13 @@ def _main():
 
     input_shape = (416,416) # multiple of 32, hw
 
-
-
     is_tiny_version = len(anchors)==6 # default setting
     if is_tiny_version:
         model = create_tiny_model(input_shape, anchors, num_classes,
-            freeze_body=2, weights_path='model_data/tiny_yolo_weights.h5')
+            freeze_body=2, weights_path='model_data/yolo_weights.h5')
     else:
-        model = create_model(input_shape, anchors, num_classes,
-            freeze_body=2, weights_path='model_data/yolo_weights.h5') # make sure you know what you freeze
+        model = create_model(input_shape, anchors, num_classes, freeze_body=2, weights_path='model_data/yolo_weights.h5') # make sure you know what you freeze
+
 
     logging = TensorBoard(log_dir=log_dir)
     checkpoint = ModelCheckpoint(log_dir + 'ep{epoch:03d}-loss{loss:.3f}-val_loss{val_loss:.3f}.h5',
@@ -46,9 +43,7 @@ def _main():
     val_split = 0.1
     with open(annotation_path) as f:
         lines = f.readlines()
-    np.random.seed(10101)
     np.random.shuffle(lines)
-    np.random.seed(None)
     num_val = int(len(lines)*val_split)
     num_train = len(lines) - num_val
 
@@ -78,7 +73,7 @@ def _main():
         model.compile(optimizer=Adam(lr=1e-4), loss={'yolo_loss': lambda y_true, y_pred: y_pred}) # recompile to apply the change
         print('Unfreeze all of the layers.')
 
-        batch_size = 32 # note that more GPU memory is required after unfreezing the body
+        batch_size = 8 # note that more GPU memory is required after unfreezing the body
         print('Train on {} samples, val on {} samples, with batch size {}.'.format(num_train, num_val, batch_size))
         model.fit_generator(data_generator_wrapper(lines[:num_train], batch_size, input_shape, anchors, num_classes),
             steps_per_epoch=max(1, num_train//batch_size),
