@@ -1,5 +1,12 @@
+#선형 탐색
+def linear_search(element, some_list):
+    for i,num in enumerate(some_list):
+        if num == element:
+            return i
+    return None
+
+#이진 탐색
 def binary_search(element, some_list):
-    # 코드를 작성하세요.
     first_index = 0
     last_index = len(some_list)-1
     while 1:
@@ -14,7 +21,14 @@ def binary_search(element, some_list):
         if first_index > last_index: # last 인덱스가 first 인덱스보다 작을 경우 범위를 벗어난것으로 간주하여 None 리턴
             return None
         
+#선형
+print(linear_search(2, [2, 3, 5, 7, 11]))
+print(linear_search(0, [2, 3, 5, 7, 11]))
+print(linear_search(5, [2, 3, 5, 7, 11]))
+print(linear_search(3, [2, 3, 5, 7, 11]))
+print(linear_search(11, [2, 3, 5, 7, 11]))
 
+#이진
 print(binary_search(2, [2, 3, 5, 7, 11]))
 print(binary_search(0, [2, 3, 5, 7, 11]))
 print(binary_search(5, [2, 3, 5, 7, 11]))
