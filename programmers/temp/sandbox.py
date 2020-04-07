@@ -1,3 +1,28 @@
+# BOJ 2606 - 바이러스
+import sys
+r = sys.stdin.readline
+
+
+def dfs(v, egs, ans):
+    for i in egs[v]:
+        if i not in ans:
+            ans.append(i)
+            dfs(i, egs, ans)
+    return ans
+
+
+N = int(r())
+edges = [[] for _ in range(N+1)]
+for _ in range(1, int(r())+1):
+    e1, e2 = map(int, r().split())
+    print("e1 e2는 ", e1, e2)
+    edges[e1].append(e2)
+    edges[e2].append(e1)
+print("edges 값",edges)
+print(len(dfs(1, edges, [1]))-1)
+
+
+
 # #5번 돌 건너기
 # def solution(stones, k):
 #     answer = 0
@@ -15,83 +40,83 @@
 
 
 
-#4번 호텔 방 배정문제(효율성)
-def sol2(diff_len, list_set_room_number):
-    print("함수 2 전환")
-    print(diff_len, list_set_room_number)
-    i = 0
-    temp_list = []
-    while i < len(list_set_room_number):
-        if i == 0:
-            temp_list.append(list_set_room_number[i] - 1)
-        else: # 0보다 클 경우
-            temp_list.append(list_set_room_number[i] - list_set_room_number[i-1] - 1)
-        if sum(temp_list) >= diff_len: # 조기 종료
-            break
-        i+= 1
+# #4번 호텔 방 배정문제(효율성)
+# def sol2(diff_len, list_set_room_number):
+#     print("함수 2 전환")
+#     print(diff_len, list_set_room_number)
+#     i = 0
+#     temp_list = []
+#     while i < len(list_set_room_number):
+#         if i == 0:
+#             temp_list.append(list_set_room_number[i] - 1)
+#         else: # 0보다 클 경우
+#             temp_list.append(list_set_room_number[i] - list_set_room_number[i-1] - 1)
+#         if sum(temp_list) >= diff_len: # 조기 종료
+#             break
+#         i+= 1
 
-    if sum(temp_list) < diff_len:
-        print("합이 모자라서 채움")
-        temp_list.append(diff_len -  sum(temp_list))
-    print(list_set_room_number)
-    print(temp_list)
-    print("함수2 전환완료")
-    return temp_list
+#     if sum(temp_list) < diff_len:
+#         print("합이 모자라서 채움")
+#         temp_list.append(diff_len -  sum(temp_list))
+#     print(list_set_room_number)
+#     print(temp_list)
+#     print("함수2 전환완료")
+#     return temp_list
 
-def sol3(temp_list, list_set_room_number):
-    temp_num_list = []
-    for i,num in enumerate(temp_list):
-        if i == 0 and num != 0:
-            print(list_set_room_number[i],num)
-            for n in range(1, list_set_room_number[i] ):
-                temp_num_list.append(n)
+# def sol3(temp_list, list_set_room_number):
+#     temp_num_list = []
+#     for i,num in enumerate(temp_list):
+#         if i == 0 and num != 0:
+#             print(list_set_room_number[i],num)
+#             for n in range(1, list_set_room_number[i] ):
+#                 temp_num_list.append(n)
 
-        if i != 0 and num != 0:
-            print(list_set_room_number[i-1],num)
-            for n in range(list_set_room_number[i-1]+1, list_set_room_number[i-1]+num+1 ):
-                temp_num_list.append(n)
-            #temp_num_list += [ num2 for num2 in range(list_set_room_number[i-1]+1, list_set_room_number[i-1]+num+1) ]
-    print("temp_num_list: ", temp_num_list)
-    return temp_num_list
+#         if i != 0 and num != 0:
+#             print(list_set_room_number[i-1],num)
+#             for n in range(list_set_room_number[i-1]+1, list_set_room_number[i-1]+num+1 ):
+#                 temp_num_list.append(n)
+#             #temp_num_list += [ num2 for num2 in range(list_set_room_number[i-1]+1, list_set_room_number[i-1]+num+1) ]
+#     print("temp_num_list: ", temp_num_list)
+#     return temp_num_list
 
 
-def solution(k, room_number):
-    set_room_number = set(room_number)
-    if len(room_number) == len(set_room_number): # 중복이 없을 경우
-        return room_number
+# def solution(k, room_number):
+#     set_room_number = set(room_number)
+#     if len(room_number) == len(set_room_number): # 중복이 없을 경우
+#         return room_number
 
-    result = []
+#     result = []
 
-    diff_len = (len(room_number) - len(set_room_number))
-    list_set_room_number = list(set_room_number)
+#     diff_len = (len(room_number) - len(set_room_number))
+#     list_set_room_number = list(set_room_number)
 
-    temp_list = sol2(diff_len, list_set_room_number)
-    temp_num_list = sol3(temp_list, list_set_room_number)
+#     temp_list = sol2(diff_len, list_set_room_number)
+#     temp_num_list = sol3(temp_list, list_set_room_number)
     
 
-    for i in room_number:
-        if i in result:
-            result.append(temp_num_list.pop(0))
-        else:
-            result.append(i)
+#     for i in room_number:
+#         if i in result:
+#             result.append(temp_num_list.pop(0))
+#         else:
+#             result.append(i)
 
-    return result
+#     return result
 
 
-k = 10
-room_number = [4,4,4,4,4,4,4,4,4,5,4,4,4,4,4,4,]
+# k = 10
+# room_number = [4,4,4,4,4,4,4,4,4,5,4,4,4,4,4,4,]
 
-print(solution(k,room_number))
+# print(solution(k,room_number))
 
-# """
-# 1. 한 번에 한 명씩 신청한 순서대로 방을 배정합니다.
+# # """
+# # 1. 한 번에 한 명씩 신청한 순서대로 방을 배정합니다.
 
-# 2. 고객은 투숙하기 원하는 방 번호를 제출합니다.
+# # 2. 고객은 투숙하기 원하는 방 번호를 제출합니다.
 
-# 3. 고객이 원하는 방이 비어 있다면 즉시 배정합니다.
+# # 3. 고객이 원하는 방이 비어 있다면 즉시 배정합니다.
 
-# 4. 고객이 원하는 방이 이미 배정되어 있으면 원하는 방보다 번호가 크면서 비어있는 방 중 가장 번호가 작은 방을 배정합니다.
-# """
+# # 4. 고객이 원하는 방이 이미 배정되어 있으면 원하는 방보다 번호가 크면서 비어있는 방 중 가장 번호가 작은 방을 배정합니다.
+# # """
 
 
 
