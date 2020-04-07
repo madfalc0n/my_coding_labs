@@ -1,6 +1,5 @@
 def course_selection(course_list):
-    # 코드를 작성하세요.
-    course_list = sorted(course_list, key=lambda x: x[1])
+    course_list = sorted(course_list, key=lambda x: x[1]) #리스트의 튜플 속에서 [1]번 기준으로 값이 낮은 순으로 정렬
     result = []
     time = 1
     for i, val in enumerate(course_list):
@@ -14,10 +13,14 @@ def course_selection(course_list):
     return result
     
 
+
 # 테스트
 print(course_selection([(6, 10), (2, 3), (4, 5), (1, 7), (6, 8), (9, 10)]))
+#[(2, 3), (4, 5), (6, 8), (9, 10)]
 print(course_selection([(1, 2), (3, 4), (0, 6), (5, 7), (8, 9), (5, 9)]))
+#[(1, 2), (3, 4), (5, 7), (8, 9)]
 print(course_selection([(4, 7), (2, 5), (1, 3), (8, 10), (5, 9), (2, 5), (13, 16), (9, 11), (1, 8)]))
+#[(1, 3), (4, 7), (8, 10), (13, 16)]
 
 
 # #답
