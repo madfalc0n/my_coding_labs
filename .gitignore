@@ -6,7 +6,8 @@ cfg/
 csv/
 pic/
 model_data/
-
+*.mp4
+*.avi
 
 # Created by https://www.gitignore.io/api/python,windows,jupyternotebooks
 # Edit at https://www.gitignore.io/?templates=python,windows,jupyternotebooks
