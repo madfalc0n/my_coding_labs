@@ -1,8 +1,6 @@
 import time
 from multiprocessing import Process, Queue
-
-
-
+import cv2
 
 
 def create_to_something(datas,que):
