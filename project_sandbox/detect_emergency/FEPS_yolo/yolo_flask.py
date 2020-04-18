@@ -17,7 +17,7 @@ def index():
 @app.route('/view_info1')
 def view_info1():
     return Response(generate1(),
-                    mimetype="multipart/x-mixed-replace; boundary=frame")
+                    mimetype="multipart/x-mixed-replace; boundary=frame") # Http 형식으로 보내줄 데이터형식
 
 @app.route('/view_info2')
 def view_info2():
