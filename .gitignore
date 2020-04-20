@@ -5,6 +5,7 @@ cfg_file/
 cfg/
 csv/
 pic/
+videos/
 model_data/
 *.mp4
 *.avi
