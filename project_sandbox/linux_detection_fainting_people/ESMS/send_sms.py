@@ -6,13 +6,16 @@ import hashlib
 import hmac
 import base64
 import json
+from datetime import datetime
 
 """
 네이버 클라우드 플랫폼의 SMS API 이용
 """
+cur_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+
 timestamp = int(time.time() * 1000)
 timestamp = str(timestamp)
-print(f"타임스탬프 값: {timestamp}")
+#print(f"타임스탬프 값: {timestamp}")
 
 url = "https://sens.apigw.ntruss.com"
 requestUrl = "/sms/v2/services/"
@@ -38,16 +41,20 @@ def make_signature(uri,timestamp,access_key,secret_key):
 signature = make_signature(uri,timestamp,access_key,secret_key)
 print(signature)
 
+send_phonenum = '010123456'
+recv_phonenum = '010123456'
+msg = cur_time + "지하철 객실 내 응급환자 발생 확인 요망"
+
 data = {
     "type":"SMS",
     "contentType":"COMM",
     "countryCode":"82",
-    "from":"허가받은번호",
+    "from": send_phonenum,
     "content":"내용",
     "messages":[
         {
-            "to":"송신할번호",
-            "content":"위의 content와 별도로 해당 번호로만 보내는 내용(optional)"
+            "to": recv_phonenum,
+            "content": msg
         }
     ]
 }
@@ -60,4 +67,5 @@ headers = {
 }
 
 response = requests.post(apiUrl, headers=headers, data = data2)
-print(response.text.encode('utf8'))
+#결과 확인
+print("Send Message result : ",response.text.encode('utf8'))

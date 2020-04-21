@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84c714e7-95a7-4b30-aaa0-863ebc03df70" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project_sandbox/linux_detection_fainting_people/ESMS/send_sms.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_sandbox/linux_detection_fainting_people/ESMS/send_sms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project_sandbox/linux_detection_fainting_people/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/project_sandbox/linux_detection_fainting_people/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,16 +13,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project_sandbox/detect_emergency/FEPS_openpose/server_flask.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+            <state relative-caret-position="76">
+              <caret line="130" column="16" lean-forward="true" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="16" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project_sandbox/linux_detection_fainting_people/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1995">
+              <caret line="105" column="13" lean-forward="true" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project_sandbox/linux_detection_fainting_people/ESMS/send_sms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/programmers/temp/sandbox.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -138,6 +168,8 @@
         <option value="$PROJECT_DIR$/project_sandbox/detect_emergency/FEPS_openpose/openpose.py" />
         <option value="$PROJECT_DIR$/project_sandbox/detect_emergency/FEPS_openpose/yolo.py" />
         <option value="$PROJECT_DIR$/project_sandbox/detect_emergency/FEPS_openpose/server_flask.py" />
+        <option value="$PROJECT_DIR$/project_sandbox/linux_detection_fainting_people/main.py" />
+        <option value="$PROJECT_DIR$/project_sandbox/linux_detection_fainting_people/ESMS/send_sms.py" />
       </list>
     </option>
   </component>
@@ -165,7 +197,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,27 +213,25 @@
               <item name="my_coding_labs" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_coding_labs" type="462c0819:PsiDirectoryNode" />
               <item name="project_sandbox" type="462c0819:PsiDirectoryNode" />
-              <item name="detect_emergency" type="462c0819:PsiDirectoryNode" />
+              <item name="linux_detection_fainting_people" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my_coding_labs" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_coding_labs" type="462c0819:PsiDirectoryNode" />
               <item name="project_sandbox" type="462c0819:PsiDirectoryNode" />
-              <item name="detect_emergency" type="462c0819:PsiDirectoryNode" />
-              <item name="FEPS_openpose" type="462c0819:PsiDirectoryNode" />
+              <item name="linux_detection_fainting_people" type="462c0819:PsiDirectoryNode" />
+              <item name="ESMS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my_coding_labs" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_coding_labs" type="462c0819:PsiDirectoryNode" />
-              <item name="project_sandbox" type="462c0819:PsiDirectoryNode" />
-              <item name="detect_emergency" type="462c0819:PsiDirectoryNode" />
-              <item name="FEPS_openpose" type="462c0819:PsiDirectoryNode" />
-              <item name="pose_estimation" type="462c0819:PsiDirectoryNode" />
+              <item name="swacademy" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -375,6 +404,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.12484157" />
@@ -677,8 +707,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project_sandbox/detect_emergency/FEPS_openpose/server_flask.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
+        <state relative-caret-position="76">
+          <caret line="130" column="16" lean-forward="true" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="16" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
@@ -721,6 +751,29 @@
           <caret column="6" selection-start-column="6" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_sandbox/linux_detection_fainting_people/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1995">
+          <caret line="105" column="13" lean-forward="true" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/programmers/temp/sandbox.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project_sandbox/linux_detection_fainting_people/ESMS/send_sms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

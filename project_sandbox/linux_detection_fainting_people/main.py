@@ -4,6 +4,7 @@ import time
 import cv2
 from Object_detection import yolo # 욜로 사용시
 from Pose_estimation import openpose #오픈포즈 사용시
+from ESMS import send_sms
 import argparse
 
 app = Flask(__name__)
@@ -106,7 +107,11 @@ def processing_frame(mode,q,q2):
             print("Error You choice '-m [yolo] or [openpose]'")
             break
            
-        if 
+        if fainting_count > 5 : # fainting 카운트가 5이상이면 응급상황임을 간주하여 SMS를 보낸다.
+            print("This is emergency scenario. Send SMS")
+            send_sms()
+            fainting_count = 0
+
         # cpy_frame = cv2.resize(frame,(416,416))
         #print(f"inference time : {round(time.time()-start_time, 4)}")
         q2.put(frame)
