@@ -131,7 +131,7 @@ def processing_frame(mode, q, q2):
         print(f"fainting_count : {fainting_count}")
         print(f"fainting_count : {sum(fainting_count)}")
         if sum(fainting_count) == 10:
-            print("This is emergency scenario. send SMS")
+            #print("This is emergency scenario. send SMS")
             send_esms()
             fainting_count = [0] * 10
             print(f"fainting_count init : {fainting_count}")
