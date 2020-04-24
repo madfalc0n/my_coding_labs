@@ -57,7 +57,7 @@ def drawPred(frame, classId, conf, left, top, right, bottom, classes):  # 클래
         # Display the label at the top of the bounding box
     labelSize, baseLine = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1)
     top = max(top, labelSize[1])
-    # 바운딩박스 위 텍스트
+    # 바운딩박스 위 해당 클래스 표시
     cv2.putText(frame, label, (left, top - 15), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 0), 5)
 
 
@@ -97,6 +97,12 @@ def postprocess(frame, outs, classes, fainting_people):
         fainting_people = len(indices)
         # 프레임 중앙 위 텍스트
         label = 'Fall Detection'
+        labelSize, baseLine = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 5, 5)
+        print(labelSize, baseLine)
+        top = max(150, labelSize[1])
+        print(top)
+        cv2.rectangle(frame, (frameWidth // 2 - 300, top - round(1.5 * labelSize[1])),
+                      (frameWidth // 2 - 300 + labelSize[0], top + baseLine), (255, 255, 255), cv2.FILLED)
         cv2.putText(frame, label, (frameWidth // 2 - 300, 150), cv2.FONT_HERSHEY_SIMPLEX, 5, (255, 0, 0), 5)
 
     for i in indices:
