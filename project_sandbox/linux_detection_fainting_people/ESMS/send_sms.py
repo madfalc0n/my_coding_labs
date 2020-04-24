@@ -7,6 +7,7 @@ import hmac
 import base64
 import json
 from datetime import datetime
+import argparse
 
 """
 Naver Cloud Platform SMS API
@@ -16,10 +17,10 @@ Naver Cloud Platform SMS API
 
 url = "https://sens.apigw.ntruss.com"
 requestUrl = "/sms/v2/services/"
-serviceId = "SMS_service_id"
+serviceId = "yourserviceid"
 requestUrl2 = "/messages"
-access_key = "access_key"
-secret_key = "secret_key_for_access_key"
+access_key = "youraccesskey"
+secret_key = "yoursecretkey"
 uri = requestUrl + serviceId + requestUrl2
 apiUrl = url + uri
 
@@ -35,7 +36,7 @@ def make_signature(uri, timestamp, access_key, secret_key):
 
 
 def create_data(send_phonenum, recv_phonenum, cur_time):
-    msg = cur_time + " 지하철 객실 내 응급환자 발생 확인 요망"
+    msg = cur_time + '\n' + "응급환자 발생! 확인 요망"
     data = {
         "type": "SMS",
         "contentType": "COMM",
@@ -82,3 +83,38 @@ def send_msg(send_phonenum, recv_phonenum, cur_time):
     # 결과 확인
     # print("Send Message result : ",result)
     return result
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-s', '--sender', type=str, default='01036900941', help='Send phone number')
+    parser.add_argument('-r', '--receiver', type=str, required=True, help='Receive phone number')
+
+    args = parser.parse_args()
+    send_phonenum = args.sender
+    recv_phonenum = args.receiver
+    cur_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+    print(f"send : {send_phonenum}, recv : {recv_phonenum}, cur_time : {cur_time}")
+    result = []
+
+    # 시그니쳐 생성
+    timestamp = int(time.time() * 1000)
+    timestamp = str(timestamp)
+    # print(f"타임스탬프 값: {timestamp}")
+    signature = make_signature(uri, timestamp, access_key, secret_key)
+    print(signature)
+
+    # 헤더 생성
+    headers = {
+        'Content-Type': 'application/json; charset=utf-8',
+        'X-ncp-apigw-timestamp': timestamp,
+        'x-ncp-iam-access-key': access_key,
+        'x-ncp-apigw-signature-v2': signature
+    }
+
+    # SMS 보내기
+    data = create_data(send_phonenum, recv_phonenum, cur_time)
+    data2 = json.dumps(data)
+    response = requests.post(apiUrl, headers=headers, data=data2)
+    result.append(response.text.encode('utf8'))
+    print(result)
