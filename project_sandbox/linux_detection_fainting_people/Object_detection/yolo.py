@@ -5,8 +5,8 @@ import os.path
 import os
 import time
 # 파라미터 초기화
-confThreshold = 0.2  # Confidence threshold
-nmsThreshold = 0.2  # Non-maximum suppression threshold
+confThreshold = 0.5  # Confidence threshold
+nmsThreshold = 0.3  # Non-maximum suppression threshold
 inpWidth = 416  # Width of network's input image
 inpHeight = 416  # Height of network's input image
 
@@ -43,27 +43,28 @@ def getOutputsNames(net):
 # Draw the predicted bounding box
 # 사각형으로 바운딩한 곳을 표시
 def drawPred(frame, classId, conf, left, top, right, bottom, classes):  # 클래스ID, 클래스에 대한 일치 확률,사각형 정보
-    # Draw a bounding box.
-    print(f"left : {left}, top : {top}, right : {right}, bottom : {bottom}")
-    cv2.rectangle(frame, (left, top), (right, bottom), (255, 178, 50), 3)
+    # 바운딩박스 그리는 함수
+    #print(f"left : {left}, top : {top}, right : {right}, bottom : {bottom}")
+    cv2.rectangle(frame, (left, top), (right, bottom), (255, 0, 0), 6)
 
     label = '%.2f' % conf
-
     # Get the label for the class name and its confidence
     if classes:
         assert (classId < len(classes))
-        label = '%s:%s' % (classes[classId], label)
-
-    # Display the label at the top of the bounding box
-    # labelSize, baseLine = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1)
-    # top = max(top, labelSize[1])
-    # cv2.rectangle(frame, (left, top - round(1.5 * labelSize[1])), (left + round(1.5 * labelSize[0]), top + baseLine),
-    #              (255, 255, 255), cv2.FILLED)
-    # cv2.putText(frame, label, (left, top), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 0, 0), 1)
-
+        #label = '%s:%s' % (classes[classId], label)
+        #label = '%s' % (classes[classId])
+        label = 'Fainting People' 
+    
+    #Display the label at the top of the bounding box
+    labelSize, baseLine = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1)
+    top = max(top, labelSize[1])
+    #바운딩박스 위 텍스트
+    cv2.putText(frame, label, (left, top-15), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 0), 5) 
+    
 
 # Remove the bounding boxes with low confidence using non-maxima suppression
-def postprocess(frame, outs, classes):
+def postprocess(frame, outs, classes,fainting_people):
+    
     frameHeight = frame.shape[0]
     frameWidth = frame.shape[1]
 
@@ -93,7 +94,13 @@ def postprocess(frame, outs, classes):
 
     indices = cv2.dnn.NMSBoxes(boxes, confidences, confThreshold, nmsThreshold)
     # 같은 포인트에서 다수의 바운딩 박스가 생성되어 있는걸 좀더 정확하게 판별해서 최소화 해줌
-    print(f"indices values : {indices} ,  {len(indices)}")
+    #print(f"indices values : {indices} ,  {len(indices)}")
+    if len(indices) >= 1:
+        fainting_people = len(indices)
+        #프레임 중앙 위 텍스트
+        label = 'Fall detect'
+        cv2.putText(frame, label, (frameWidth//2-300, 150), cv2.FONT_HERSHEY_SIMPLEX, 5, (255, 0, 0), 5)
+        
     for i in indices:
         i = i[0]  # 2차원 행렬이므로
         box = boxes[i]
@@ -102,31 +109,39 @@ def postprocess(frame, outs, classes):
         width = box[2]
         height = box[3]
         drawPred(frame, classIds[i], confidences[i], left, top, left + width, top + height, classes)
+    
+     
+    
+    return fainting_people
 
 def yolo(frame):
-    print("YOLO Start in")
-    print(frame.shape)
+    #print("YOLO Start in")
+    #print(frame.shape)
+    fainting_people = 0
     start_time = time.time()
-    #frame = cv2.resize(frame,(416,416))
-    blob = cv2.dnn.blobFromImage(frame, 1 / 255, (inpWidth, inpHeight), [0, 0, 0], 1, crop=False)
-    # weight, config, class 호출
-    classesFile = "Object_detection/cfg_file/coco.names"
+    
+    #모델 관련 weight, config, class 호출
+    classesFile = "Object_detection/cfg_file/one.names"
     classes = None
     with open(classesFile, 'rt') as f:
         classes = f.read().rstrip('\n').split('\n') 
-    modelConfiguration = "Object_detection/cfg_file/yolov3-tiny.cfg"
-    modelWeights = "Object_detection/cfg_file/yolov3-tiny.weights"
+    modelConfiguration = "Object_detection/cfg_file/one.cfg"
+    modelWeights = "Object_detection/cfg_file/one_class_v2_2800.weights"
+    
+    #네트워크 관련 설정
     net = cv2.dnn.readNetFromDarknet(modelConfiguration, modelWeights)
     net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
     net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU) 
-    #network input
+    
+    #프레임 전처리 및 네트워크 Input
+    blob = cv2.dnn.blobFromImage(frame, 1 / 255, (inpWidth, inpHeight), [0, 0, 0], 1, crop=False)
     net.setInput(blob)
     outs = net.forward(getOutputsNames(net))
-    postprocess(frame, outs, classes)
+    fainting_people = postprocess(frame, outs, classes,fainting_people)
     
     #cv2.imwrite(url, frame)
-    print(f"frame shape : {frame.shape}, YOLO End out...{round(time.time()-start_time,3)}")
-    return frame
+    print(f"YOLO inference time : {round(time.time()-start_time,3)}")
+    return [frame, fainting_people]
 
 
 if __name__ == "__main__": #테스트 시
