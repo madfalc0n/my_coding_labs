@@ -9,51 +9,45 @@ BFS ....
 어떤 두 정점 사이에 여러 개의 간선이 있을 수 있다. 입력으로 주어지는 간선은 양방향이다.
 """
 
-def process_dfs(temp_list,v):
-    pass
+def dfs(matrix,start):#스택이용
+    print(f"{start}",end=' ')
+    visit[start] = 1
+    for find_node in range(1,len(matrix[start])):
+        #print(f"start : {start} find_node : {find_node} visit : {visit}")
+        if matrix[start][find_node] and visit[find_node] == 0: #매트릭스에서 간선으로 연결되어있고 방문한적이없는경우 탐색
+            dfs(matrix,find_node)
 
-def process_bfs(temp_list,v):
-    queue = []
-    record = []
-    queue.append(v)
-    print(f"queue status : {queue}")
-    while True:
-        if len(queue) < 1:
-            break
-        proc_num = queue.pop(0)
-        print(f"proc_num status : {proc_num}")
-        print(f"queue status : {queue}")
-
-        for i,data in enumerate(temp_list[proc_num-1]):
-            if data == 1:
-                if (i+1) not in queue:
-                    queue.append(i+1)
-                temp_list[proc_num-1][i] = 3
-                temp_list[i][proc_num-1] = 3
-            print(temp_list)
-        print(f"end queue status : {queue}")
-        record.append(proc_num)
-    print(' '.join(record))
-    #print(temp_list)
+def bfs(matrix,start):
+    visit = []
+    queue = [start]
+    while queue:
+        #print(f"queue : {queue}")
+        #print(f"visit : {visit}")
+        node = queue.pop(0)
+        if node not in visit: #노드가 방문한적이 없다면?
+            visit.append(node)
+            queue += [i for i in range(1,len(matrix[node])) if matrix[node][i] == 1 and i not in queue and i not in visit]
+        #print(f"{node}", end=' ')
+    visit = list(map(str,visit))
+    print(' '.join(visit))
 
 
+node, line, start = map(int,input().split(' '))
+print(node,line,start)
+visit = [0] * (node+1)
 
-
-
-node, line, v = map(int, input().split(' '))
-print(node, line, v)
-temp_list = []
-for i in range(node):
-    temp = [0 for j in range(node)]
-    temp_list.append(temp)
-print(temp_list)
+matrix = [[0]*(node+1) for i in range(node+1)] #0번쨰는 사용하지 않는다.
 
 for i in range(line):
-    node1, node2 = map(int, input().split(' '))
-    temp_list[node1-1][node2-1] = 1
-    temp_list[node2-1][node1-1] = 1
-print(temp_list)
+    node = list(map(int,input().split(' ')))
+    matrix[node[0]][node[1]] = 1
+    matrix[node[1]][node[0]] = 1
+# for i in matrix:
+#     print(i)
 
-process_dfs(temp_list,v)
-process_bfs(temp_list,v)
-
+#print(visit) #0번째는 사용하지 않는다
+#print(matrix,start)
+dfs(matrix,start)
+print()
+#print(matrix,start)
+bfs(matrix,start)

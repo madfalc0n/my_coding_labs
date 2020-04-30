@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="84c714e7-95a7-4b30-aaa0-863ebc03df70" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithm/programmers/no-complete/fund_price.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/programmers/no-complete/fund_price.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithm/baekjun/no-complete/BFS_DFS.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/baekjun/no-complete/BFS_DFS.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,20 +68,20 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\FEPS_openpose" />
-      <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\FEPS_openpose\cfg_file" />
-      <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\old" />
-      <recent name="D:\KMH\AI\git\my_coding_labs\swacademy\complete" />
-      <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\FEPS_yolo\templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\FEPS\videoplayer2" />
       <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\FEPS\videoplayer" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\myounghwan\KMH\my_coding_labs\algorithm\programmers\complete" />
+      <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\FEPS_openpose" />
+      <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\FEPS_openpose\cfg_file" />
+      <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\old" />
+      <recent name="D:\KMH\AI\git\my_coding_labs\swacademy\complete" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.c_lv2_fund_price">
-    <configuration name="BFS" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.BFS_DFS">
+    <configuration name="BFS_DFS" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="my_coding_labs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -89,11 +89,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/baekjun/no-complete" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm/baekjun/no-complete" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\KMH\AI\git\my_coding_labs\baekjun\no-complete\BFS_DFS.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithm/baekjun/no-complete/BFS_DFS.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.BFS_DFS" />
         <item itemvalue="Python.c_lv2_fund_price" />
         <item itemvalue="Python.practice" />
         <item itemvalue="Python.find_max" />
         <item itemvalue="Python.yut_play" />
-        <item itemvalue="Python.BFS" />
       </list>
     </recent_temporary>
   </component>
@@ -235,38 +235,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="511" y="212" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1588080236168" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1588252856470">
+    <state width="1515" height="134" key="GridCell.Tab.0.bottom" timestamp="1588262357153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588252856470" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1588252856470">
+    <state width="1515" height="134" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588262357153" />
+    <state width="1515" height="134" key="GridCell.Tab.0.center" timestamp="1588262357153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588252856470" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1588252856470">
+    <state width="1515" height="134" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588262357153" />
+    <state width="1515" height="134" key="GridCell.Tab.0.left" timestamp="1588262357153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588252856470" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1588252856470">
+    <state width="1515" height="134" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588262357153" />
+    <state width="1515" height="134" key="GridCell.Tab.0.right" timestamp="1588262357153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588252856470" />
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1588090179586">
+    <state width="1515" height="134" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588262357153" />
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1588260532940">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588090179586" />
-    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1588090179586">
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588260532940" />
+    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1588260532940">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588090179586" />
-    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1588090179586">
+    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588260532940" />
+    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1588260532940">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588090179586" />
-    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1588090179586">
+    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588260532940" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1588260532940">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588090179586" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588260532940" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588084123500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
