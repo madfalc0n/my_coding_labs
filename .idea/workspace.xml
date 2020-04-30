@@ -20,9 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84c714e7-95a7-4b30-aaa0-863ebc03df70" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/my_coding_labs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_coding_labs.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithm/programmers/no-complete/fund_price.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/programmers/no-complete/fund_price.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,7 @@
       <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\FEPS\videoplayer" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.find_max">
+  <component name="RunManager" selected="Python.c_lv2_fund_price">
     <configuration name="BFS" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="my_coding_labs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,7 +102,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="cov2name" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="c_lv2_fund_price" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="my_coding_labs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -111,32 +110,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/swacademy/no-complete" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm/programmers/no-complete" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/swacademy/no-complete/cov2name.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="dasom_salary" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="my_coding_labs" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/swacademy/no-complete" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\KMH\AI\git\my_coding_labs\swacademy\complete\dasom_salary.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\myounghwan\KMH\my_coding_labs\algorithm\programmers\complete\c_lv2_fund_price.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -158,6 +136,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/programmers/no-complete/find_max.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="practice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="my_coding_labs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/temp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp/practice.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -189,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.c_lv2_fund_price" />
+        <item itemvalue="Python.practice" />
         <item itemvalue="Python.find_max" />
         <item itemvalue="Python.yut_play" />
         <item itemvalue="Python.BFS" />
-        <item itemvalue="Python.cov2name" />
-        <item itemvalue="Python.dasom_salary" />
       </list>
     </recent_temporary>
   </component>
@@ -236,22 +235,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="511" y="212" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1588080236168" />
-    <state width="1515" height="261" key="GridCell.Tab.0.bottom" timestamp="1588090179586">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1588252856470">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588090179586" />
-    <state width="1515" height="261" key="GridCell.Tab.0.center" timestamp="1588090179585">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588252856470" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1588252856470">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588090179585" />
-    <state width="1515" height="261" key="GridCell.Tab.0.left" timestamp="1588090179585">
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588252856470" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1588252856470">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588090179585" />
-    <state width="1515" height="261" key="GridCell.Tab.0.right" timestamp="1588090179586">
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588252856470" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1588252856470">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588090179586" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588252856470" />
     <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1588090179586">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
