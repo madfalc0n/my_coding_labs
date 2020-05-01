@@ -9,7 +9,7 @@ BFS ....
 어떤 두 정점 사이에 여러 개의 간선이 있을 수 있다. 입력으로 주어지는 간선은 양방향이다.
 """
 
-def dfs(matrix,start):#스택이용
+def dfs(matrix,start): #재귀 이용
     print(f"{start}",end=' ')
     visit[start] = 1
     for find_node in range(1,len(matrix[start])):
@@ -17,31 +17,33 @@ def dfs(matrix,start):#스택이용
         if matrix[start][find_node] and visit[find_node] == 0: #매트릭스에서 간선으로 연결되어있고 방문한적이없는경우 탐색
             dfs(matrix,find_node)
 
+
 def bfs(matrix,start):
-    visit = []
+    #print(f"{start}",end=' ')
+    #print(node)
+    visit = [start]
     queue = [start]
     while queue:
-        #print(f"queue : {queue}")
-        #print(f"visit : {visit}")
-        node = queue.pop(0)
-        if node not in visit: #노드가 방문한적이 없다면?
-            visit.append(node)
-            queue += [i for i in range(1,len(matrix[node])) if matrix[node][i] == 1 and i not in queue and i not in visit]
-        #print(f"{node}", end=' ')
+        start = queue.pop(0)
+        for i in range(1,len(matrix)):
+            if matrix[start][i] == 1 and i not in visit: #선으로 연결되어있고 방문한 적이 없는놈인 경우
+                visit.append(i)
+                queue.append(i)
     visit = list(map(str,visit))
     print(' '.join(visit))
 
 
+
 node, line, start = map(int,input().split(' '))
-print(node,line,start)
+#print(node,line,start)
 visit = [0] * (node+1)
 
 matrix = [[0]*(node+1) for i in range(node+1)] #0번쨰는 사용하지 않는다.
 
 for i in range(line):
-    node = list(map(int,input().split(' ')))
-    matrix[node[0]][node[1]] = 1
-    matrix[node[1]][node[0]] = 1
+    node_l = list(map(int,input().split(' ')))
+    matrix[node_l[0]][node_l[1]] = 1
+    matrix[node_l[1]][node_l[0]] = 1
 # for i in matrix:
 #     print(i)
 
