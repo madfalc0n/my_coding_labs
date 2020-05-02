@@ -1,21 +1,26 @@
-# def dfs(matrix,N): #dfs는 스택
-#     #시작지점탐색
-#     for i in range(1,len(matrix)):
-#         for j in range(1,len(matrix[i])):
-#             if matrix[i][j] == 1:
-#                 start_x = i
-#                 start_y = j
-#     visit = []
-#     stack = []
-#     while True:
-#         #육지인지 탐색
-#         if matrix[start[0]][start[1]] == 1:
-        
-#         else: #육지가 아니라면
+def dfs(matrix,N): #dfs는 스택
+    visit = []
+    #시작지점탐색
+    for i in range(1,len(matrix)):
+        for j in range(1,len(matrix[i])):
+            visit.append([i,j])
+            if matrix[i][j] == 1:
+                start_x = i
+                start_y = j
+                break
+
+    start_point = [start_x,start_y]
+    stack = [start_point]
+    while True:
+        #육지인지 탐색
+        start_x += 1
+        if matrix[start_x][start_y] == 1 and [start_x,start_y] not in visit: # 탐색하려는 위치가 육지고 방문한적이 없는경우
+            stack.append([start_x,start_y])
+        else: #육지가 아니라면
 
 
-#         stack = 
-#         visit.append(start)
+        stack = 
+        visit.append(start)
 
 
 
