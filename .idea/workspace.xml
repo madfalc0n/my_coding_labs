@@ -20,8 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84c714e7-95a7-4b30-aaa0-863ebc03df70" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/algorithm/baekjun/complete/c_2178_find_maze.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algorithm/baekjun/no-complete/17142_lab.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/baekjun/no-complete/17142_lab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithm/baekjun/no-complete/2178_find_maze.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,16 +72,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\FEPS\videoplayer2" />
+      <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\FEPS\videoplayer" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\myounghwan\KMH\my_coding_labs\algorithm\baekjun\complete" />
       <recent name="C:\Users\myounghwan\KMH\my_coding_labs\algorithm\programmers\complete" />
       <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\FEPS_openpose" />
       <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\FEPS_openpose\cfg_file" />
       <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\old" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\FEPS\videoplayer2" />
-      <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\FEPS\videoplayer" />
     </key>
   </component>
   <component name="RunManager" selected="Python.17142_lab">
@@ -146,6 +148,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="c_2178_find_maze" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="my_coding_labs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm/baekjun/no-complete" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\myounghwan\KMH\my_coding_labs\algorithm\baekjun\complete\c_2178_find_maze.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="c_2606_virus" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="my_coding_labs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,34 +190,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="c_lv2_fund_price" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="my_coding_labs" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm/programmers/no-complete" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\myounghwan\KMH\my_coding_labs\algorithm\programmers\complete\c_lv2_fund_price.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.17142_lab" />
+        <item itemvalue="Python.c_2178_find_maze" />
         <item itemvalue="Python.2667_put_area" />
         <item itemvalue="Python.c_2606_virus" />
         <item itemvalue="Python.c_1260_BFS_DFS" />
-        <item itemvalue="Python.c_lv2_fund_price" />
       </list>
     </recent_temporary>
   </component>
@@ -237,42 +239,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="511" y="212" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1588080236168" />
-    <state width="1515" height="134" key="GridCell.Tab.0.bottom" timestamp="1588516172790">
+    <state width="1515" height="205" key="GridCell.Tab.0.bottom" timestamp="1588600227551">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="134" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588516172790" />
-    <state width="1515" height="134" key="GridCell.Tab.0.center" timestamp="1588516172790">
+    <state width="1515" height="205" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588600227551" />
+    <state width="1515" height="205" key="GridCell.Tab.0.center" timestamp="1588600227551">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="134" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588516172790" />
-    <state width="1515" height="134" key="GridCell.Tab.0.left" timestamp="1588516172789">
+    <state width="1515" height="205" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588600227551" />
+    <state width="1515" height="205" key="GridCell.Tab.0.left" timestamp="1588600227551">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="134" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588516172789" />
-    <state width="1515" height="134" key="GridCell.Tab.0.right" timestamp="1588516172790">
+    <state width="1515" height="205" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588600227551" />
+    <state width="1515" height="205" key="GridCell.Tab.0.right" timestamp="1588600227551">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="134" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588516172790" />
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1588337988712">
+    <state width="1515" height="205" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588600227551" />
+    <state width="1515" height="205" key="GridCell.Tab.1.bottom" timestamp="1588600227552">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588337988712" />
-    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1588337988712">
+    <state width="1515" height="205" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588600227552" />
+    <state width="1515" height="205" key="GridCell.Tab.1.center" timestamp="1588600227552">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588337988712" />
-    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1588337988712">
+    <state width="1515" height="205" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588600227552" />
+    <state width="1515" height="205" key="GridCell.Tab.1.left" timestamp="1588600227552">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588337988712" />
-    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1588337988712">
+    <state width="1515" height="205" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588600227552" />
+    <state width="1515" height="205" key="GridCell.Tab.1.right" timestamp="1588600227552">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588337988712" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588084123500">
+    <state width="1515" height="205" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588600227552" />
+    <state x="329" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1588596781405">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588084123500" />
+    <state x="329" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1588596781405" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588589087308">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588589087308" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -282,7 +288,19 @@
           <line>15</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/algorithm/baekjun/no-complete/17142_lab.py</url>
+          <line>143</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
 </project>
