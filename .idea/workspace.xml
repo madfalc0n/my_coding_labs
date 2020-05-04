@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="84c714e7-95a7-4b30-aaa0-863ebc03df70" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithm/baekjun/no-complete/17142_lab.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/baekjun/no-complete/17142_lab.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +82,28 @@
       <recent name="D:\KMH\AI\git\my_coding_labs\project_sandbox\detect_emergency\FEPS\videoplayer" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.2667_put_area">
+  <component name="RunManager" selected="Python.17142_lab">
+    <configuration name="17142_lab" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="my_coding_labs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm/baekjun/no-complete" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithm/baekjun/no-complete/17142_lab.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="2667_put_area" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="my_coding_labs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -166,34 +188,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="practice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="my_coding_labs" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/temp" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp/practice.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.17142_lab" />
         <item itemvalue="Python.2667_put_area" />
         <item itemvalue="Python.c_2606_virus" />
         <item itemvalue="Python.c_1260_BFS_DFS" />
         <item itemvalue="Python.c_lv2_fund_price" />
-        <item itemvalue="Python.practice" />
       </list>
     </recent_temporary>
   </component>
@@ -236,22 +237,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="511" y="212" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1588080236168" />
-    <state width="1515" height="134" key="GridCell.Tab.0.bottom" timestamp="1588346555968">
+    <state width="1515" height="134" key="GridCell.Tab.0.bottom" timestamp="1588516172790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="134" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588346555968" />
-    <state width="1515" height="134" key="GridCell.Tab.0.center" timestamp="1588346555968">
+    <state width="1515" height="134" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588516172790" />
+    <state width="1515" height="134" key="GridCell.Tab.0.center" timestamp="1588516172790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="134" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588346555968" />
-    <state width="1515" height="134" key="GridCell.Tab.0.left" timestamp="1588346555968">
+    <state width="1515" height="134" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588516172790" />
+    <state width="1515" height="134" key="GridCell.Tab.0.left" timestamp="1588516172789">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="134" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588346555968" />
-    <state width="1515" height="134" key="GridCell.Tab.0.right" timestamp="1588346555968">
+    <state width="1515" height="134" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588516172789" />
+    <state width="1515" height="134" key="GridCell.Tab.0.right" timestamp="1588516172790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="134" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588346555968" />
+    <state width="1515" height="134" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588516172790" />
     <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1588337988712">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

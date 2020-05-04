@@ -91,13 +91,15 @@ print("탐색시작")
 for i in virus_permute:
     for j in i:#동시에 가능한만큼
         bfs(j)
+
     for x in time_matrix:
+        temp = 0
         for xx in x:
             if xx == -1: #-1 있을 경우 다 퍼뜨리지 못함
                 visit_result.append(-1)
             else: #없을경우 걸린시간 저장
-                tmp = xx.
-                visit_result.append(max(x))
+                mx_tmp = max(xx,temp)
+                visit_result.append(mx_tmp)
     time_matrix = cpy_time_matrix
 
 print(visit_result)
