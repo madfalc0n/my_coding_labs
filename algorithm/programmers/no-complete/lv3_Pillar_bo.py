@@ -10,7 +10,7 @@ def install(background,point,item): #구조물 설치
                 background[x][y] = '-'
 
             else: # 기둥이 밑에 없을 때, 보를 체크
-                if 1 < x and x <= n:
+                if 1 < x and x <= len(background):
                     if background[x-1][y] == '|': # 위에 보가 있을 때
                         background[x][y] = '-'
     
@@ -20,7 +20,7 @@ def install(background,point,item): #구조물 설치
                 background[x][y] = '|'
             
             else: # 밑에 기둥이 없을 때
-                if 1 < x and x < n:
+                if 1 < x and x < len(background):
                     if background[x-1][y] == '|': # 위에 보가 있을 때
                         background[x][y] = '|'
                     elif background[x+1][y-1] == '-': # 대각선 아래 기둥 있을 떄
