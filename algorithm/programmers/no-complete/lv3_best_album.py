@@ -32,6 +32,12 @@ def solution(genres, plays):
     print(genres_set)
     print(genres_index)
     
+
+    
+
+    popular_genres = [] #플레이수 별로 정렬
+    
+
     answer = []
     return answer
 
