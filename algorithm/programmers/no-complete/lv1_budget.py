@@ -6,10 +6,8 @@ https://programmers.co.kr/learn/courses/30/lessons/12982
 from itertools import combinations,permutations
 
 def dfs(d,length):
-    
     visit = [d.pop(0)]
-
-
+    
 
     return 0
 
