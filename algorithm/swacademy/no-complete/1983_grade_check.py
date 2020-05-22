@@ -30,7 +30,7 @@ for index in range(1,int(input())+1):
         tmp_point = int(tmp_point_list[0]*0.35) + int(tmp_point_list[1]*0.45) + int(tmp_point_list[2]*0.20)
         matrix_dict[i+1] = tmp_point
     sort_matrix_dict = sorted(matrix_dict.items(), key= lambda x: x[1], reverse=True)
-    print(sort_matrix_dict)
+    #print(sort_matrix_dict)
     order = sort_matrix_dict.index((k,matrix_dict[k]))+1
     order = (order // cal_n) + (order % cal_n)
     print(f"#{index} {grade[order]}")
