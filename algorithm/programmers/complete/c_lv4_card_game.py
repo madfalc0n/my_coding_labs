@@ -24,18 +24,16 @@ def solution(left, right):
     matrix[0][0] = 0
     for i in range(N):
         for j in range(N):
-            if left[i] > right[j]: #왼쪽카드가 오른쪽 카드보다 큰경우
-                matrix[i][j] += right[j]
-                matrix[i][j+1] = max(matrix[i][j], matrix[i][j+1])
-            else: # 같거나 작은경우, 다음차례를 위한 준비
-                matrix[i+1][j+1] = max(matrix[i][j], matrix[i+1][j]) # 1,1에 0,0(0) 과 1,0(-1) 중 최대 값
-                matrix[i+1][j] = matrix[i][j] # 1,0에  0,0(0) 값 넣음
+            if matrix[i][j] != -1:
+                if left[i] > right[j]: #왼쪽카드가 오른쪽 카드보다 큰경우
+                    matrix[i][j] += right[j]
+                    matrix[i][j+1] = max(matrix[i][j], matrix[i][j+1])
+                else: # 같거나 작은경우, 다음차례를 위한 준비
+                    matrix[i+1][j+1] = max(matrix[i][j], matrix[i+1][j]) # 1,1에 0,0(0) 과 1,0(-1) 중 최대 값
+                    matrix[i+1][j] = matrix[i][j] # 1,0에  0,0(0) 값 넣음
     max_val = 0
-    for m_list in matrix:
-        if max_val < max(m_list):
-            max_val = max(m_list)
-
-
+    for i in range(N):
+        max_val = max(max_val, matrix[N-1][i], matrix[i][N-1])
     return max_val
 
 
