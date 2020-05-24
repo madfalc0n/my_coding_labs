@@ -3,17 +3,15 @@ def fib_optimized(n):
     cur = 1
     pre = 0
     #print(cur, pre)
-    for i in range(1,n+1):
-        cur = cur + pre
-        pre = cur 
-
-
+    for i in range(1,n):
+        cur, pre = cur + pre, cur
     return cur
 
 # 테스트
-print(fib_optimized(4))
-# print(fib_optimized(1))
-# print(fib_optimized(2))
+# 1, 1, 2 , 3 , 5 , 8
+#print(fib_optimized(4))
+#print(fib_optimized(1))
+print(fib_optimized(3))
 # print(fib_optimized(3))
 # print(fib_optimized(4))
 # print(fib_optimized(5))
