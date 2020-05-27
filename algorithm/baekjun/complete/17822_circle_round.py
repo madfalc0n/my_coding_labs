@@ -25,42 +25,86 @@ def lotation_circle(xi,di,ki,matrix):#원판 회전
                 matrix[i].append(pop_val)
 
 def bfs(start,matrix,same_result):
-    x = start[0]
-    y = start[1]
     ax = [0,0,1,-1]
     ay = [1,-1,0,0]
     max_len = len(matrix[0])-1
-    tmp_list = []
-    if y == 1:
-        if matrix[x][y] == matrix[x][max_len]:
-            tmp_list.append([x,max_len])
-    elif y == max_len:
-        if matrix[x][y] == matrix[x][1]:
-            tmp_list.append([x,1])
-    for i in range(4):
-        nx = x + ax[i]
-        ny = y + ay[i]
-        if 0 < nx and nx < len(matrix) and 0 < ny and ny < len(matrix[0]):
-            if matrix[x][y] == matrix[nx][ny]:
-                tmp_list.append([nx,ny])
+    visit = [start]
+    queue = [start]
+    while queue:
+        tmp_list = []
+        x,y = queue.pop(0)
+        if matrix[x][y] == 0:
+            continue
 
-    if len(tmp_list) != 0:
-        for data in tmp_list:
-            if data not in same_result:
-                same_result.append(data)
-        if [x,y] not in same_result:
-            same_result.append([x,y])
-    else:
-        pass
+        if y == 1:
+            if [x,max_len] not in visit:
+                if matrix[x][y] == matrix[x][max_len]:
+                    tmp_list.append([x,max_len])
+                    visit.append([x,max_len])
+
+        elif y == max_len:
+            if [x,1] not in visit:
+                if matrix[x][y] == matrix[x][1]:
+                    tmp_list.append([x,1])
+                    visit.append([x,1])
+
+        for i in range(4):
+            nx = x + ax[i]
+            ny = y + ay[i]
+            if 0 < nx and nx < len(matrix) and 0 < ny and ny < len(matrix[0]):
+                if matrix[x][y] == matrix[nx][ny] and [nx,ny] not in visit: # 인접한 값이 서로 같고, 방문한 적이 없는 경우 
+                    visit.append([nx,ny])
+                    queue.append([nx,ny])
+                    tmp_list.append([nx,ny])
+
+        print(f"tmp_list : {tmp_list}")
+        if len(tmp_list) != 0:
+            tmp_list.append([x,y])
+            for same_point in tmp_list:
+                if same_point not in same_result:
+                    same_result.append(same_point)
+
+    return same_result
+
+    
+    
+# def bfs(start,matrix,same_result):
+#     x = start[0]
+#     y = start[1]
+#     ax = [0,0,1,-1]
+#     ay = [1,-1,0,0]
+#     max_len = len(matrix[0])-1
+#     tmp_list = []
+#     if y == 1:
+#         if matrix[x][y] == matrix[x][max_len]:
+#             tmp_list.append([x,max_len])
+#     elif y == max_len:
+#         if matrix[x][y] == matrix[x][1]:
+#             tmp_list.append([x,1])
+#     for i in range(4):
+#         nx = x + ax[i]
+#         ny = y + ay[i]
+#         if 0 < nx and nx < len(matrix) and 0 < ny and ny < len(matrix[0]):
+#             if matrix[x][y] == matrix[nx][ny]:
+#                 tmp_list.append([nx,ny])
+
+#     if len(tmp_list) != 0:
+#         for data in tmp_list:
+#             if data not in same_result:
+#                 same_result.append(data)
+#         if [x,y] not in same_result:
+#             same_result.append([x,y])
+#     else:
+#         pass
 
 def cal_val(matrix): #인근한 점 계산
     # print("before")
     # print_list(matrix)
     same_result = []
-    for i in range(1,len(matrix)):
-        for j in range(1,len(matrix[0])):
-            if matrix[i][j] != 0: #0이 아닐때 bfs 처리
-                bfs([i,j],matrix,same_result)
+    start = [1,1]
+    power_list = bfs(start,matrix,same_result)
+    print_list(matrix)
+    print(power_list)
 
     #bfs 통해서 인근한 점 같은 값들 리스트 전부 0으로 표시
     if len(same_result) == 0:# 인접하면서 같은 값이 없는경우 전체/값 평균
