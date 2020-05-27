@@ -31,31 +31,28 @@ def bfs(start,matrix,same_result):
     visit = [start]
     queue = [start]
     while queue:
-        tmp_list = []
         x,y = queue.pop(0)
-        if matrix[x][y] == 0:
+        comp_val = matrix[x][y]
+        if comp_val == 0:
             continue
 
         if y == 1:
             if [x,max_len] not in visit:
-                if matrix[x][y] == matrix[x][max_len]:
-                    tmp_list.append([x,max_len])
+                if matrix[x][max_len] == comp_val:
                     visit.append([x,max_len])
 
         elif y == max_len:
             if [x,1] not in visit:
-                if matrix[x][y] == matrix[x][1]:
-                    tmp_list.append([x,1])
+                if matrix[x][1] == comp_val:
                     visit.append([x,1])
 
         for i in range(4):
             nx = x + ax[i]
             ny = y + ay[i]
             if 0 < nx and nx < len(matrix) and 0 < ny and ny < len(matrix[0]):
-                if matrix[x][y] == matrix[nx][ny] and [nx,ny] not in visit: # 인접한 값이 서로 같고, 방문한 적이 없는 경우 
+                if matrix[nx][ny] == comp_val and [nx,ny] not in visit: # 인접한 값이 서로 같고, 방문한 적이 없는 경우 
                     visit.append([nx,ny])
                     queue.append([nx,ny])
-                    tmp_list.append([nx,ny])
 
         print(f"tmp_list : {tmp_list}")
         if len(tmp_list) != 0:
