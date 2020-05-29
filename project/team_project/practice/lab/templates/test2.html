@@ -1,0 +1,21 @@
+<html>
+    <head>
+    
+    <script>
+    function resize_Image(){
+        newX=event.x;
+        newY=event.y;
+        event.srcElement.width=newX;
+        event.srcElement.height=newY;
+    
+    }
+    </script>
+    </head>
+    
+    <body>
+    
+    이미지 위에서 드래그 해보세요..<br>
+    <img src="http://demo.happycgi.com/jini/pick1.jpg"  ondrag="resize_Image()">
+    
+    </body>    
+</html> 

@@ -24,6 +24,7 @@ def lotation_circle(xi,di,ki,matrix):#원판 회전
                 pop_val = matrix[i].pop(1)
                 matrix[i].append(pop_val)
 
+#내가 푸는 다른방법
 def bfs(start,matrix,same_result):
     ax = [0,0,1,-1]
     ay = [1,-1,0,0]
@@ -64,7 +65,7 @@ def bfs(start,matrix,same_result):
     return same_result
 
     
-    
+# #내가 푼거
 # def bfs(start,matrix,same_result):
 #     x = start[0]
 #     y = start[1]
