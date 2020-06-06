@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file '.\untitled.ui'
@@ -10,72 +9,53 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from test2 import Ui_Form2
 
-
-class Ui_Frame(object):
-    def setupUi(self, Frame):
-        
-        Frame.setObjectName("Frame")
-        Frame.resize(472, 459)
-        Frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        Frame.setFrameShadow(QtWidgets.QFrame.Raised)
-
-        self.pushButton = QtWidgets.QPushButton(Frame)
-        self.pushButton.setGeometry(QtCore.QRect(360, 50, 101, 91))
-        self.pushButton.setObjectName("pushButton")
-        self.pushButton_2 = QtWidgets.QPushButton(Frame)
-        self.pushButton_2.setGeometry(QtCore.QRect(130, 160, 161, 41))
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(490, 300)
+        self.pushButton_2 = QtWidgets.QPushButton(Form)
+        self.pushButton_2.setGeometry(QtCore.QRect(140, 190, 161, 41))
         self.pushButton_2.setObjectName("pushButton_2")
-        self.plainTextEdit = QtWidgets.QPlainTextEdit(Frame)
-        self.plainTextEdit.setGeometry(QtCore.QRect(100, 50, 241, 31))
-        self.plainTextEdit.setObjectName("plainTextEdit")
-        self.plainTextEdit_2 = QtWidgets.QPlainTextEdit(Frame)
-        self.plainTextEdit_2.setGeometry(QtCore.QRect(100, 90, 241, 31))
+        self.plainTextEdit_2 = QtWidgets.QPlainTextEdit(Form)
+        self.plainTextEdit_2.setGeometry(QtCore.QRect(110, 140, 241, 31))
         self.plainTextEdit_2.setObjectName("plainTextEdit_2")
-        self.label = QtWidgets.QLabel(Frame)
-        self.label.setGeometry(QtCore.QRect(20, 60, 56, 12))
+        self.pushButton = QtWidgets.QPushButton(Form)
+        self.pushButton.setGeometry(QtCore.QRect(370, 80, 101, 91))
+        self.pushButton.setObjectName("pushButton")
+        self.plainTextEdit = QtWidgets.QPlainTextEdit(Form)
+        self.plainTextEdit.setGeometry(QtCore.QRect(110, 80, 241, 31))
+        self.plainTextEdit.setObjectName("plainTextEdit")
+        self.label = QtWidgets.QLabel(Form)
+        self.label.setGeometry(QtCore.QRect(30, 90, 56, 12))
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(Frame)
-        self.label_2.setGeometry(QtCore.QRect(20, 100, 56, 12))
+        self.label_2 = QtWidgets.QLabel(Form)
+        self.label_2.setGeometry(QtCore.QRect(30, 150, 56, 12))
         self.label_2.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setObjectName("label_2")
-        self.radioButton = QtWidgets.QRadioButton(Frame)
-        self.radioButton.setGeometry(QtCore.QRect(10, 250, 90, 16))
-        self.radioButton.setObjectName("radioButton")
-        self.radioButton_2 = QtWidgets.QRadioButton(Frame)
-        self.radioButton_2.setGeometry(QtCore.QRect(110, 250, 90, 16))
-        self.radioButton_2.setObjectName("radioButton_2")
-        self.radioButton_3 = QtWidgets.QRadioButton(Frame)
-        self.radioButton_3.setGeometry(QtCore.QRect(230, 250, 90, 16))
-        self.radioButton_3.setObjectName("radioButton_3")
 
-        self.retranslateUi(Frame)
-        self.radioButton.clicked.connect(Frame.setCycle)
-        self.radioButton_2.clicked.connect(Frame.setCycle)
-        self.radioButton_3.clicked.connect(Frame.setCycle)
-        self.pushButton.clicked.connect(Frame.startchk)
-        self.pushButton_2.clicked.connect(Frame.stopchk)
-        QtCore.QMetaObject.connectSlotsByName(Frame)
+        self.retranslateUi(Form)
+        self.pushButton.clicked.connect(Ui_Form2)
+        self.pushButton_2.clicked.connect(Form.close)
+        QtCore.QMetaObject.connectSlotsByName(Form)
 
-    def retranslateUi(self, Frame):
+    def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Frame.setWindowTitle(_translate("Frame", "Frame"))
-        self.pushButton.setText(_translate("Frame", "Login"))
-        self.pushButton_2.setText(_translate("Frame", "Exit"))
-        self.label.setText(_translate("Frame", "ID"))
-        self.label_2.setText(_translate("Frame", "PW"))
-        self.radioButton.setText(_translate("Frame", "10초"))
-        self.radioButton_2.setText(_translate("Frame", "5분"))
-        self.radioButton_3.setText(_translate("Frame", "10분"))
+        Form.setWindowTitle(_translate("Form", "Form"))
+        self.pushButton_2.setText(_translate("Form", "Exit"))
+        self.pushButton.setText(_translate("Form", "Login"))
+        self.label.setText(_translate("Form", "ID"))
+        self.label_2.setText(_translate("Form", "PW"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Frame = QtWidgets.QFrame()
-    ui = Ui_Frame()
-    ui.setupUi(Frame)
-    Frame.show()
+    Form = QtWidgets.QWidget()
+    ui = Ui_Form()
+    ui.setupUi(Form)
+    Form.show()
     sys.exit(app.exec_())

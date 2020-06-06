@@ -4,14 +4,15 @@ from PyQt5.QtWidgets import QApplication, QWidget, QPushButton,QMessageBox
 
 #이벤트 처리 함수
 from PyQt5.QtCore import QCoreApplication
-from test import MyApp
+from test import Ui_Form
 
-class Exam(QWidget,MyApp):
+
+class Exam(QWidget,Ui_Form):
     def __init__(self):
         #상위 객체 호출
         super().__init__()
-        self.initUI(self)
-        #self.show()
+        self.setupUi(self)
+        self.show()
 
 
 
