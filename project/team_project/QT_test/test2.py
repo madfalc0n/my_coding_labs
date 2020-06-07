@@ -11,21 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form2(object):
-    def setupUi2(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(487, 215)
-        self.label = QtWidgets.QLabel(Form)
-        self.label.setGeometry(QtCore.QRect(140, 60, 191, 71))
-        self.label.setObjectName("label")
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
-
-    def retranslateUi(self, Form):
-        _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "뒤로가기"))
 
 
 if __name__ == "__main__":

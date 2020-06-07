@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QPushButton,QMessageBox
 
 #이벤트 처리 함수
 from PyQt5.QtCore import QCoreApplication
+from PyQt5 import uic
 from test import Ui_Form
 
 
@@ -13,9 +14,6 @@ class Exam(QWidget,Ui_Form):
         super().__init__()
         self.setupUi(self)
         self.show()
-
-
-
 #모든 Qt5 어플은 아래 오브젝트를 생성해야함
 # sys.argv : 파이선 셀스크립트에서 명령줄을 제어하는 부분
 app = QApplication(sys.argv)

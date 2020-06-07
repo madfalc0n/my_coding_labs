@@ -9,9 +9,14 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from test2 import Ui_Form2
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton,QMessageBox
+
+
+
+
 
 class Ui_Form(object):
+
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(490, 300)
@@ -38,7 +43,7 @@ class Ui_Form(object):
         self.label_2.setObjectName("label_2")
 
         self.retranslateUi(Form)
-        self.pushButton.clicked.connect(Ui_Form2)
+        self.pushButton.clicked.connect(self.cusclick)
         self.pushButton_2.clicked.connect(Form.close)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
@@ -49,6 +54,33 @@ class Ui_Form(object):
         self.pushButton.setText(_translate("Form", "Login"))
         self.label.setText(_translate("Form", "ID"))
         self.label_2.setText(_translate("Form", "PW"))
+
+    def cusclick(self):
+        clic = Ui_Form2()
+        clic.exec_()
+    
+
+
+class Ui_Form2(object):
+    def __init__(self):
+        super().__init__()
+        self.setupUi2(self)
+        self.show()
+
+    def setupUi2(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(487, 215)
+        self.label = QtWidgets.QLabel(Form)
+        self.label.setGeometry(QtCore.QRect(140, 60, 191, 71))
+        self.label.setObjectName("label")
+
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Form"))
+        self.label.setText(_translate("Form", "뒤로가기"))
 
 
 if __name__ == "__main__":
