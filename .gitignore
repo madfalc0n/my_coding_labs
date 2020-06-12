@@ -9,6 +9,7 @@ videos/
 model_data/
 *.mp4
 *.avi
+*.tiff
 
 # Created by https://www.gitignore.io/api/python,windows,jupyternotebooks
 # Edit at https://www.gitignore.io/?templates=python,windows,jupyternotebooks
