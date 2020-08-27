@@ -5,11 +5,12 @@
 def solution(numbers):
 	numbers = list(map(str, numbers))
 	# print(numbers)
-	for i in range(len(numbers)):
-		tmp_val1 = numbers[i]
-		tmp_val2 = numbers[i] * 4
-		# 6666, 2222, 1010 으로 변형되며 숫자간 크기의 구별이 가능해진다.
-		numbers[i] = [ tmp_val1, tmp_val2[:4]]
+	numbers = [[numbers[i], (numbers[i]*5)[:4]  ] for i in range(len(numbers))] 
+	# for i in range(len(numbers)):
+	# 	tmp_val1 = numbers[i]
+	# 	tmp_val2 = numbers[i] * 4
+	# 	# 6666, 2222, 1010 으로 변형되며 숫자간 크기의 구별이 가능해진다.
+	# 	numbers[i] = [ tmp_val1, tmp_val2[:4]]
 	numbers.sort(key=lambda x: x[1], reverse=True)
 	
 	# print(numbers)
