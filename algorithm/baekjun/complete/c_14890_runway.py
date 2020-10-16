@@ -2,6 +2,8 @@
 경사로
 https://www.acmicpc.net/problem/14890
 2:07 시작
+텀있음
+5:30 종료 
 """
 N, L = list(map(int,input().split()))
 matrix = [list(map(int,input().split())) for _ in range(N)]
@@ -43,8 +45,11 @@ for i in range(N):
 # print(bridge_list)
 no_list = []
 for br in bridge_list:
+    # if br == [3,3,2,2,3,3]:
+    #     print()
     i = 0
-    while i < (len(br)-1):
+    save_list = []
+    while i < (len(br)-1):        
         if abs(br[i]-br[i+1]) > 1:
             no_list.append(br)
             break
@@ -52,8 +57,8 @@ for br in bridge_list:
             if br[i] < br[i+1]: #뒤에 놈이 큰경우
                 if i-L+1 in range(N):
                     tmp_bool = True
-                    for j in range(i-L+1, i):
-                        if br[i] != br[j]:
+                    for j in range(i-L+1, i+1):
+                        if br[i] != br[j] or j in save_list:
                             tmp_bool = False
                             break
                     if tmp_bool == False: #서로 높이 다를 경우
@@ -62,13 +67,15 @@ for br in bridge_list:
                 else:# 범위에서 벗어나면 탈락
                     no_list.append(br)
                     break
+                save_list.extend(list(range(i-L+1,i+1)))
                 i += 1
+                
 
             else: #앞에놈이 큰경우
-                if i+L in range(N):
+                if i+L in range(N) :
                     tmp_bool = True
                     for j in range(i+1, i+L+1):
-                        if br[i+1] != br[j]:
+                        if br[i+1] != br[j] or j in save_list:
                             tmp_bool = False
                             break
                     if tmp_bool == False: #서로 높이 다를 경우
@@ -77,7 +84,9 @@ for br in bridge_list:
                 else: # 범위에서 벗어나면 탈락
                     no_list.append(br)
                     break
-                i += (L + 1) 
+                save_list.extend(list(range(i+1, i+L+1)))
+                i += L 
+                
         else:
             i += 1
 # print(no_list)
@@ -85,5 +94,5 @@ for no in no_list:
     if no in result:
         result.pop(result.index(no))
 
-print(result)
+print(len(result))
 
