@@ -2,24 +2,26 @@
 벽돌깨기
 https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRQm6qfL0DFAUo&categoryId=AWXRQm6qfL0DFAUo&categoryType=CODE
 16:00 시작
-
-1. 값이 0이 아닌 애들의 좌표를 찾는다.
+17:38 종료 
+1. 값이 0이 아닌 애들의 좌표 리스트를 만든다
+2. 좌표리스트에서 좌표하나 가져와서 그 좌표에 대한 벽돌을 부순다.
+3. 업데이트 된 매트릭스를 기반으로 좌표리스트를 업데이트하고 dfs 로 다음차례 전송
 """
 
-def clean_zero(matrix):
-    global h,w
+# def clean_zero(matrix):
+#     global h,w
 
-    for i in range(w):
-        tmp_list = []
-        tmp_cnt = 0
-        for j in range(h):
-            if matrix[j][i] != 0:
-                tmp_list.append(matrix[j][i])
-            else:
-                tmp_cnt += 1
-        tmp_list = ([0] * tmp_cnt) + tmp_list
-        for x in range(h):
-            matrix[x][i]  = tmp_list[x]
+#     for i in range(w):
+#         tmp_list = []
+#         tmp_cnt = 0
+#         for j in range(h):
+#             if matrix[j][i] != 0:
+#                 tmp_list.append(matrix[j][i])
+#             else:
+#                 tmp_cnt += 1
+#         tmp_list = ([0] * tmp_cnt) + tmp_list
+#         for x in range(h):
+#             matrix[x][i]  = tmp_list[x]
     
 
 #벽돌 제거
@@ -55,7 +57,12 @@ def remove_bricks(matrix, start):
                             queue.append([nx,ny])
             copy_matrix[x][y] = 0
 
-    clean_zero(copy_matrix)
+    # clean_zero(copy_matrix)
+    for i in range(w):
+        for j in range(h):
+            copy_matrix[h].remove(0)
+            copy_matrix[h].append(0)
+            
     
     return copy_matrix
 
